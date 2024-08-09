@@ -9,7 +9,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>{children}</body>
+        <body className ='min-h-screen overflow-hdden flex
+        flex-col'>
+          {children}
+          </body>
       </html>  
     </ClerkProvider>
   );
