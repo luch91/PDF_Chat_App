@@ -1,4 +1,4 @@
-import {getApps, initializeApp} from "firebase/app";
+import {getApp, getApps, initializeApp} from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 import {getStorage} from "firebase/storage";
 
@@ -11,3 +11,11 @@ const firebaseConfig = {
     messagingSenderId: "744272797523",
     appId: "1:744272797523:web:e047f979049c176e864ba6"
   };
+
+  const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp()
+
+  const db = getFirestore(app);
+
+  const storage = getStorage(app)
+
+export {db, storage };
