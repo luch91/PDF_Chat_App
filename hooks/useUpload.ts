@@ -60,6 +60,7 @@ function useUpload() {
             });
 
             setStatus(StatusText.GENERATING);
+            
             setFileId(fileIdToUploadTo);
         });
     };
